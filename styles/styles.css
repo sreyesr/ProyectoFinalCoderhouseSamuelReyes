@@ -1,0 +1,254 @@
+.fondo {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  font-size: 80px;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul a:hover {
+  color: #00c3ff;
+}
+
+
+
+.subtitulo1 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.narutogaleria {
+  color: rgb(233, 97, 19);
+  font-size: 30px;
+  text-shadow: white 1px 1px 2px;
+  margin: 20px;
+}
+
+.saogaleria {
+  color: rgb(94, 94, 198);
+  font-size: 30px;
+  text-shadow: white 1px 1px 2px;
+  margin: 20px;
+}
+
+.slamdunkgaleria {
+  color: red;
+  font-size: 30px;
+  text-shadow: white 1px 1px 2px;
+  margin: 20px;
+}
+
+.row {
+  display: flex;
+  padding: 5px;
+  flex-wrap: wrap;
+
+}
+
+.row img {
+  width: 100%;
+}
+
+.column {
+  flex: 25%;
+  padding: 5px;
+}
+
+.column img {
+  margin: top 5px;
+
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+  }
+}
+
+.enlace {
+  color: white;
+  margin: 30px;
+  font-size: 25px;
+}
+
+.enlace:hover {
+  transform: scale(1.1);
+}
+
+
+.subtitulo {
+  color: white;
+  font-size: 20px;
+  margin: 40px;
+}
+
+.seguir {
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /*espacio entre la imagen y el titulo*/
+  padding: 30px;
+  text-align: center;
+}
+
+.header-image img {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.header-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  /*asegura que la imagen mantenga su proporcion*/
+}
+
+.header-title {
+  margin: 0;
+  font-size: 80px;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.footer {
+  padding: 100px 0 50px 0;
+}
+
+.footer-link {
+  display: flex;
+}
+
+.link {
+  width: 300px;
+}
+
+.link h3 {
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.link p {
+  font-size: 18px;
+  color: white;
+}
+
+.link a {
+  font-size: 17px;
+  color: aquamarine;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.link a:hover {
+  transform: scale(1.1);
+}
+
+.link a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.socials {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.socials a {
+  display: inline-block;
+  min-height: 30px;
+  min-width: 30px;
+  background-color: #00c3ff;
+  margin: 0 15px 10px 0;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 100%;
+  color: white;
+  font-size: 20px;
+}
+
+.socials a:hover {
+  background-color: black
+}
+
+.socials a:hover {
+  transform: scale(1.5);
+}
+
+/*slide*/
+
+div#slider {
+  overflow: hidden;
+} /* las imágenes no van a salir del márgen de la pantalla*/
+div#slider figure img {
+  width: 20%;
+  float: left;
+}
+
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 20s slidy infinite; /*el movimiento se va a mantener de forma indefinida -infinito-*/
+}
+
+/*esta parte del código define el movimiento de las imágenes a la izquierda*/
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+@media(max-width: 991px){
+  div#slider{
+    width: 100%;
+  }
+}
