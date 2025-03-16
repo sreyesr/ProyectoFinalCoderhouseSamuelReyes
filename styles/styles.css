@@ -27,12 +27,12 @@ header{
   
 }
 .logo img{
-  height: 50px;
-  margin-right: 10px;
+  height: 80px;
+  margin-right: 15px;
 }
 nav a{
   font-weight: 600;
-  padding-right:  10px;
+  margin-right: 150px;
   font-size: 25px;
   flex-wrap: wrap;
 }
@@ -45,6 +45,26 @@ nav a:hover{
     height: auto;
   }
 
+}
+
+.narutogaleria {
+  color: rgb(233, 97, 19);
+  font-size: 30px;
+  text-shadow: white 1px 1px 2px;
+  margin: 20px;
+}
+.saogaleria {
+  color: rgb(94, 94, 198);
+  font-size: 30px;
+  text-shadow: white 1px 1px 2px;
+  margin: 20px;
+}
+
+.slamdunkgaleria {
+  color: red;
+  font-size: 30px;
+  text-shadow: white 1px 1px 2px;
+  margin: 20px;
 }
 
 
