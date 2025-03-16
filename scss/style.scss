@@ -1,0 +1,294 @@
+$primary-color: #333;
+$secondary-color: #00c3ff;
+$text-color: white;
+$link-color: aquamarine;
+$background-black: black;
+$font-stack: sans-serif;
+$font-weight-bold: 600;
+$base-font-size: 16px;
+$header-height: 70px;
+$gallery-margin: 20px;
+
+body {
+    margin: 0;
+    font-family: $font-stack;
+    padding-top: $header-height;
+}
+a {
+    text-decoration: none;
+    color: $text-color;
+  }
+  .fondo {
+    background-color: $background-black;
+  }
+  header {
+    display: flex;
+    height: $header-height;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    flex-wrap: wrap;
+  
+    img {
+      height: 80px;
+      margin-right: 15px;
+    }
+  }
+  nav {
+    a {
+      font-weight: $font-weight-bold;
+      margin-right: 150px;
+      font-size: 25px;
+      flex-wrap: wrap;
+  
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    header {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+  .galeria {
+    font-size: 30px;
+    text-shadow: $text-color 1px 1px 2px;
+    margin: $gallery-margin;
+  }
+  .narutogaleria {
+    @extend .galeria;
+    color: rgb(233, 97, 19);
+  }
+  
+  .saogaleria {
+    @extend .galeria;
+    color: rgb(94, 94, 198);
+  }
+  
+  .slamdunkgaleria {
+    @extend .galeria;
+    color: red;
+  }
+  .subtitulo1 {
+    color: $text-color;
+    font-size: 20px;
+    text-align: center;
+  }
+  .row {
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+  
+    img {
+      width: 100%;
+    }
+  }
+  
+  .column {
+    flex: 25%;
+    padding: 5px;
+  
+    img {
+      margin-top: 5px;
+    }
+  }
+  
+  .enlace {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .subtitulo {
+    color: $text-color;
+    font-size: 20px;
+    margin: 40px;
+  }
+  .seguir {
+    color: $text-color;
+    font-size: 20px;
+    margin: 20px;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  .footer {
+    padding: 100px 0 50px 0;
+  
+    &-link {
+      display: flex;
+    }
+  }
+  .link {
+    width: 300px;
+  
+    h3 {
+      font-size: 18px;
+      color: $text-color;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      color: $text-color;
+    }
+    a {
+      font-size: 17px;
+      color: $link-color;
+      display: block;
+      margin-bottom: 20px;
+  
+      &:hover {
+        transform: scale(1.1);
+        color: $secondary-color;
+        text-decoration: underline;
+      }
+    }
+  } 
+  .socials {
+    display: flex;
+    margin-bottom: 15px;
+  
+    a {
+      display: inline-block;
+      min-height: 30px;
+      min-width: 30px;
+      background-color: $secondary-color;
+      margin: 0 15px 10px 0;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 100%;
+      color: $text-color;
+      font-size: 20px;
+  
+      &:hover {
+        background-color: $background-black;
+        transform: scale(1.5);
+      }
+    }
+  }
+/*slide*/
+div#slider {
+  overflow: hidden;
+
+  figure {
+    img {
+      width: 20%;
+      float: left;
+    }
+
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 20s slidy infinite; /*el movimiento se va a mantener de forma indefinida -infinito-*/
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 75%;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 75%;
+  }
+}
+
+.breakpoint-900-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 75%;
+}
+
+@media (max-width: 900px) {
+  .column {
+    margin-top: 10px;
+    flex: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .column {
+    flex: auto;
+  }
+}
+/*esta parte del código define el movimiento de las imágenes a la izquierda*/
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+@media (max-width: 991px) {
+  div#slider {
+    width: 150%;
+  }
+}
+
+@media (max-width: 710px) {
+  div#slider {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  div#slider {
+    width: 125%;
+  }
+}
+
+@media (max-width: 430px) {
+  div#slider {
+    width: 140%;
+  }
+}

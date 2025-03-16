@@ -1,72 +1,71 @@
-
-body{
+@charset "UTF-8";
+body {
   margin: 0;
   font-family: sans-serif;
   padding-top: 70px;
 }
-a{
+
+a {
   text-decoration: none;
-  color:white;
+  color: white;
 }
+
 .fondo {
   background-color: black;
 }
 
-header{
+header {
   display: flex;
   height: 70px;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
-.logo{
+
+.logo {
   display: flex;
   align-items: center;
   font-size: 20px;
   flex-wrap: wrap;
-  
 }
-.logo img{
+.logo img {
   height: 80px;
   margin-right: 15px;
 }
-nav a{
+
+nav a {
   font-weight: 600;
   margin-right: 150px;
   font-size: 25px;
   flex-wrap: wrap;
 }
-nav a:hover{
+nav a:hover {
   color: #00c3ff;
 }
-@media(max-width: 800px){
-  header{
+
+@media (max-width: 800px) {
+  header {
     flex-direction: column;
     height: auto;
   }
-
+}
+.galeria, .slamdunkgaleria, .saogaleria, .narutogaleria {
+  font-size: 30px;
+  text-shadow: white 1px 1px 2px;
+  margin: 20px;
 }
 
 .narutogaleria {
   color: rgb(233, 97, 19);
-  font-size: 30px;
-  text-shadow: white 1px 1px 2px;
-  margin: 20px;
 }
+
 .saogaleria {
   color: rgb(94, 94, 198);
-  font-size: 30px;
-  text-shadow: white 1px 1px 2px;
-  margin: 20px;
 }
 
 .slamdunkgaleria {
   color: red;
-  font-size: 30px;
-  text-shadow: white 1px 1px 2px;
-  margin: 20px;
 }
-
 
 .subtitulo1 {
   color: white;
@@ -78,9 +77,7 @@ nav a:hover{
   display: flex;
   padding: 5px;
   flex-wrap: wrap;
-
 }
-
 .row img {
   width: 100%;
 }
@@ -89,20 +86,13 @@ nav a:hover{
   flex: 25%;
   padding: 5px;
 }
-
 .column img {
-  margin: top 5px;
-
+  margin-top: 5px;
 }
-
-
-
-
 
 .enlace:hover {
   transform: scale(1.1);
 }
-
 
 .subtitulo {
   color: white;
@@ -116,8 +106,6 @@ nav a:hover{
   margin: 20px;
 }
 
-
-
 .container {
   display: flex;
   flex-direction: row;
@@ -129,7 +117,6 @@ nav a:hover{
 .footer {
   padding: 100px 0 50px 0;
 }
-
 .footer-link {
   display: flex;
 }
@@ -137,31 +124,24 @@ nav a:hover{
 .link {
   width: 300px;
 }
-
 .link h3 {
   font-size: 18px;
   color: white;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-
 .link p {
   font-size: 18px;
   color: white;
 }
-
 .link a {
   font-size: 17px;
   color: aquamarine;
   display: block;
   margin-bottom: 20px;
 }
-
 .link a:hover {
   transform: scale(1.1);
-}
-
-.link a:hover {
   color: #00c3ff;
   text-decoration: underline;
 }
@@ -170,7 +150,6 @@ nav a:hover{
   display: flex;
   margin-bottom: 15px;
 }
-
 .socials a {
   display: inline-block;
   min-height: 30px;
@@ -183,27 +162,15 @@ nav a:hover{
   color: white;
   font-size: 20px;
 }
-
 .socials a:hover {
-  background-color: black
-}
-
-.socials a:hover {
+  background-color: black;
   transform: scale(1.5);
 }
 
 /*slide*/
-
 div#slider {
   overflow: hidden;
 }
-
-/* las imágenes no van a salir del márgen de la pantalla*/
-div#slider figure img {
-  width: 20%;
-  float: left;
-}
-
 div#slider figure {
   position: relative;
   width: 500%;
@@ -211,12 +178,12 @@ div#slider figure {
   left: 0;
   text-align: left;
   font-size: 0;
-  animation: 20s slidy infinite;
-  /*el movimiento se va a mantener de forma indefinida -infinito-*/
+  animation: 20s slidy infinite; /*el movimiento se va a mantener de forma indefinida -infinito-*/
 }
-
-
-
+div#slider figure img {
+  width: 20%;
+  float: left;
+}
 
 @media (max-width: 900px) {
   .container {
@@ -228,7 +195,6 @@ div#slider figure {
     width: 75%;
   }
 }
-
 @media (max-width: 500px) {
   .container {
     display: flex;
@@ -239,8 +205,14 @@ div#slider figure {
     width: 75%;
   }
 }
-
-
+.breakpoint-900-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 75%;
+}
 
 @media (max-width: 900px) {
   .column {
@@ -248,79 +220,60 @@ div#slider figure {
     flex: 100%;
   }
 }
-
-
 @media (max-width: 400px) {
   .column {
     flex: auto;
   }
 }
-
-
-
-
-
-
 /*esta parte del código define el movimiento de las imágenes a la izquierda*/
 @keyframes slidy {
   0% {
     left: 0%;
   }
-
   20% {
     left: 0%;
   }
-
   25% {
     left: -100%;
   }
-
   45% {
     left: -100%;
   }
-
   50% {
     left: -200%;
   }
-
   70% {
     left: -200%;
   }
-
   75% {
     left: -300%;
   }
-
   95% {
     left: -300%;
   }
-
   100% {
     left: -400%;
   }
 }
-
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   div#slider {
     width: 150%;
   }
 }
-
-
-@media(max-width: 710px) {
+@media (max-width: 710px) {
   div#slider {
     width: 100%;
   }
 }
-
-@media(max-width: 560px) {
+@media (max-width: 560px) {
   div#slider {
     width: 125%;
   }
 }
-
-@media(max-width: 430px) {
+@media (max-width: 430px) {
   div#slider {
     width: 140%;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
